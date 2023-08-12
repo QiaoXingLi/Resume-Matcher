@@ -6,6 +6,7 @@ RUN apt-get install -y build-essential python-dev git
 RUN pip install -U pip setuptools wheel
 RUN pip install -r requirements.txt
 RUN python run_first.py
-ENTRYPOINT [ "streamlit", "run", "streamlit_app.py"]
+
+CMD [ './entrypoint.sh' ]
 
 EXPOSE 8501
